@@ -24,7 +24,12 @@ export default function Meme({
     // show empty template when a template is selected
     return (
       <div className="MemeContainer">
-        <img alt={pic} src={baseURL + pic + '.png'} className="App-logo" />
+        <img
+          alt={pic}
+          src={baseURL + pic + '.png'}
+          className="App-logo"
+          data-test-id="meme-image"
+        />
       </div>
     );
   } else if (status === 2) {
