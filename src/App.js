@@ -7,7 +7,7 @@ import Input from './Input';
 import Meme from './Meme';
 import Selector from './Selector';
 
-function App() {
+export default function App() {
   const [templates, setTemplates] = useState([
     { value: 'empty', label: '---' },
   ]);
@@ -81,5 +81,3 @@ function App() {
     </>
   );
 }
-
-export default App;
