@@ -57,7 +57,12 @@ export default function Download({
   } else if (status === 3) {
     return (
       <>
-        <img className="App-logo" alt="downloaded meme" src={imageData} />
+        <img
+          className="App-logo"
+          alt="downloaded meme"
+          src={imageData}
+          data-test-id="meme-image"
+        />
         <br />
         <button onClick={() => setClick(true)}>Download</button>
         <br />
