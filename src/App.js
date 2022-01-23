@@ -15,9 +15,9 @@ export default function App() {
     value: 'empty',
     label: '---',
   });
-  let [topText, setTopText] = useState('');
-  let [botText, setBotText] = useState('');
-  let [status, setStatus] = useState(0);
+  const [topText, setTopText] = useState('');
+  const [botText, setBotText] = useState('');
+  const [status, setStatus] = useState(0);
 
   // clean and change input for use with preview and download
   function textReplace(stringInput) {
@@ -30,54 +30,51 @@ export default function App() {
   }
 
   return (
-    <>
-      <div
-        className="App"
-        css={css`
-          margin-top: 2%;
-          margin-left: 30%;
-          margin-right: 30%;
-        `}
-      >
-        <div className="App-header">
-          <p>One - Two - Three MEME!</p>
-        </div>
-        <div className="App-body">
-          <Selector
-            status={status}
-            setStatus={setStatus}
-            templates={templates}
-            setTemplates={setTemplates}
-            selectedTemplate={selectedTemplate}
-            setSelectedTemplate={setSelectedTemplate}
-          />
-          <br />
-          <Meme
-            status={status}
-            selectedTemplate={selectedTemplate}
-            topText={topText}
-            botText={botText}
-            textReplace={textReplace}
-          />
-          <br />
-          <Input
-            status={status}
-            setStatus={setStatus}
-            topText={topText}
-            setTopText={setTopText}
-            botText={botText}
-            setBotText={setBotText}
-          />
-          <Download
-            status={status}
-            setStatus={setStatus}
-            selectedTemplate={selectedTemplate}
-            topText={topText}
-            botText={botText}
-            textReplace={textReplace}
-          />
-        </div>
+    <div
+      className="App"
+      css={css`
+        margin-top: 2%;
+        margin-left: 30%;
+        margin-right: 30%;
+      `}
+    >
+      <div className="App-header">
+        <p>One - Two - Three MEME!</p>
       </div>
-    </>
+      <div className="App-body">
+        <Selector
+          setStatus={setStatus}
+          templates={templates}
+          setTemplates={setTemplates}
+          selectedTemplate={selectedTemplate}
+          setSelectedTemplate={setSelectedTemplate}
+        />
+        <br />
+        <Meme
+          status={status}
+          selectedTemplate={selectedTemplate}
+          topText={topText}
+          botText={botText}
+          textReplace={textReplace}
+        />
+        <br />
+        <Input
+          status={status}
+          setStatus={setStatus}
+          topText={topText}
+          setTopText={setTopText}
+          botText={botText}
+          setBotText={setBotText}
+        />
+        <Download
+          status={status}
+          setStatus={setStatus}
+          selectedTemplate={selectedTemplate}
+          topText={topText}
+          botText={botText}
+          textReplace={textReplace}
+        />
+      </div>
+    </div>
   );
 }

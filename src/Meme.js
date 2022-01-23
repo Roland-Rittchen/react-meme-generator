@@ -9,22 +9,22 @@ export default function Meme({
   botText,
   textReplace,
 }) {
-  let [pic, setPic] = useState('doge');
+  const [pic, setPic] = useState('doge');
 
   if (selectedTemplate) {
     if (pic !== selectedTemplate.value) {
-      setPic((pic = selectedTemplate.value));
+      setPic(selectedTemplate.value);
     }
   }
 
   if (status === 0) {
     // dont show before a meme template is selected
-    return <div className="MemeContainer"></div>;
+    return <div className="MemeContainer" />;
   } else if (status === 1) {
     // show empty template when a template is selected
     return (
       <div className="MemeContainer">
-        <img alt={pic} src={baseURL + pic + '.png'} className="App-logo"></img>
+        <img alt={pic} src={baseURL + pic + '.png'} className="App-logo" />
       </div>
     );
   } else if (status === 2) {
@@ -44,7 +44,7 @@ export default function Meme({
           }
           className="App-logo"
           data-test-id="meme-image"
-        ></img>
+        />
       </div>
     );
   } else {

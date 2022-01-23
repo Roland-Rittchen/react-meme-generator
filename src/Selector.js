@@ -6,14 +6,12 @@ import Select from 'react-select';
 const baseURL = 'https://api.memegen.link/templates?animated=false';
 
 export default function Selector({
-  status,
   setStatus,
   templates,
   setTemplates,
   selectedTemplate,
   setSelectedTemplate,
 }) {
-  const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -28,25 +26,24 @@ export default function Selector({
           });
           setTemplates(newTemp);
         },
-        (error) => {
+        (err) => {
           setIsLoaded(true);
-          setError(error);
+          console.log(err);
         },
       );
   }, [setTemplates]);
 
   function selectorChange(val) {
     setSelectedTemplate((selectedTemplate = val));
-    setStatus((status = 1));
+    setStatus(1);
   }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
+  if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
     return (
       <>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label for="react-select-3-input">
           Meme template
           <Select

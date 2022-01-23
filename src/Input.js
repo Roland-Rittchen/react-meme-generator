@@ -11,7 +11,7 @@ export default function Input({
   }
 
   if (status === 0 || status > 2) {
-    return <></>;
+    return null;
   } else if (status === 1 || status === 2) {
     return (
       <>
@@ -24,7 +24,7 @@ export default function Input({
               setTopText(e.currentTarget.value);
             }}
             value={topText}
-          ></input>
+          />
         </label>
         <br />
         <label>
@@ -35,7 +35,7 @@ export default function Input({
               setBotText(e.currentTarget.value);
             }}
             value={botText}
-          ></input>
+          />
         </label>
         <br />
         <button onClick={preview} data-test-id="generate-meme">
