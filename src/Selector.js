@@ -42,17 +42,16 @@ export default function Selector({
     return <div>Loading...</div>;
   } else {
     return (
-      <>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label for="react-select-3-input">
-          Meme template
-          <Select
-            defaultValue={selectedTemplate}
-            onChange={selectorChange}
-            options={templates}
-          />
-        </label>
-      </>
+      <label for="react-select-3-input">
+        <input hidden />{' '}
+        {/* hidden input to satisfy eslint, which doesnt recognise the input in Select */}
+        Meme template
+        <Select
+          defaultValue={selectedTemplate}
+          onChange={selectorChange}
+          options={templates}
+        />
+      </label>
     );
   }
 }
