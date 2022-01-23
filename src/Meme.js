@@ -43,6 +43,7 @@ export default function Meme({
             '.png'
           }
           className="App-logo"
+          data-test-id="meme-image"
         ></img>
       </div>
     );

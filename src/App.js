@@ -23,6 +23,9 @@ function App() {
   function textReplace(stringInput) {
     let tempString = stringInput.trim();
     tempString = tempString.replace(/\s/g, '_');
+    tempString = tempString.replace(/[#]/g, '~h');
+    tempString = tempString.replace(/[?]/g, '~q');
+    tempString = tempString.replace(/[/]/g, '~s');
     return tempString;
   }
 

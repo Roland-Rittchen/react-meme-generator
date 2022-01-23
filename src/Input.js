@@ -38,7 +38,9 @@ export default function Input({
           ></input>
         </label>
         <br />
-        <button onClick={preview}>Preview</button>
+        <button onClick={preview} data-test-id="generate-meme">
+          Preview
+        </button>
 
         <br />
         <br />

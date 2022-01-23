@@ -47,11 +47,14 @@ export default function Selector({
   } else {
     return (
       <>
-        <Select
-          defaultValue={selectedTemplate}
-          onChange={selectorChange}
-          options={templates}
-        />
+        <label for="react-select-3-input">
+          Meme template
+          <Select
+            defaultValue={selectedTemplate}
+            onChange={selectorChange}
+            options={templates}
+          />
+        </label>
       </>
     );
   }
