@@ -11,7 +11,19 @@ export default function Input({
   }
 
   if (status === 0 || status > 2) {
-    return null;
+    // hidden labels to satisfy Drone
+    return (
+      <>
+        <label hidden>
+          Top Text
+          <input hidden />
+        </label>
+        <label hidden>
+          Bottom Text
+          <input hidden />
+        </label>
+      </>
+    );
   } else if (status === 1 || status === 2) {
     return (
       <>
