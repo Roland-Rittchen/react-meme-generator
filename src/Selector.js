@@ -42,7 +42,7 @@ export default function Selector({
     return <div>Loading...</div>;
   } else {
     return (
-      <label for="react-select-3-input">
+      <label for="selector-input" id="selector-label">
         <input hidden />{' '}
         {/* hidden input to satisfy eslint, which doesnt recognise the input in Select */}
         Meme template
@@ -50,6 +50,7 @@ export default function Selector({
           defaultValue={selectedTemplate}
           onChange={selectorChange}
           options={templates}
+          inputId="selector-input"
         />
       </label>
     );
