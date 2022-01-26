@@ -16,12 +16,25 @@ export default function Input({
       <>
         <label hidden>
           Top text
-          <input hidden />
+          <input
+            hidden
+            onChange={(e) => {
+              setTopText(e.currentTarget.value);
+            }}
+          />
         </label>
         <label hidden>
           Bottom text
-          <input hidden />
+          <input
+            hidden
+            onChange={(e) => {
+              setBotText(e.currentTarget.value);
+            }}
+          />
         </label>
+        <button hidden onClick={preview} data-test-id="generate-meme">
+          Preview
+        </button>
       </>
     );
   } else if (status === 1 || status === 2) {
