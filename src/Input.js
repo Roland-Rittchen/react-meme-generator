@@ -15,11 +15,11 @@ export default function Input({
     return (
       <>
         <label hidden>
-          Top Text
+          Top text
           <input hidden />
         </label>
         <label hidden>
-          Bottom Text
+          Bottom text
           <input hidden />
         </label>
       </>
@@ -29,7 +29,7 @@ export default function Input({
       <>
         <br />
         <label>
-          Top Text
+          Top text
           <input
             placeholder="top text"
             onChange={(e) => {
@@ -40,7 +40,7 @@ export default function Input({
         </label>
         <br />
         <label>
-          Bottom Text
+          Bottom text
           <input
             placeholder="bottom text"
             onChange={(e) => {
