@@ -1,5 +1,3 @@
-// /** @jsx jsx */
-// import { css, jsx } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import Select from 'react-select';
 
@@ -43,7 +41,7 @@ export default function Selector({
   } else {
     return (
       <label for="selector-input" id="selector-label">
-        <input hidden />{' '}
+        <button hidden />{' '}
         {/* hidden input to satisfy eslint, which doesnt recognise the input in Select */}
         Meme template
         <Select
