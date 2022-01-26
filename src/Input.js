@@ -32,7 +32,7 @@ export default function Input({
             }}
           />
         </label>
-        <button hidden onClick={preview} data-test-id="generate-meme">
+        <button onClick={preview} data-test-id="generate-meme">
           Preview
         </button>
       </>
