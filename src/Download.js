@@ -69,6 +69,6 @@ export default function Download({
       </>
     );
   } else {
-    return null;
+    return <button onClick={() => setClick(true)}>Download</button>;
   }
 }
