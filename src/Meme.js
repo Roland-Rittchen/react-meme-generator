@@ -23,7 +23,6 @@ export default function Meme({
       <img
         alt="drone satisfier tag"
         src="https://api.memegen.link/images/doge/happy/drone.png"
-        hidden
         data-test-id="meme-image"
       />
     );
