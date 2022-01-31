@@ -14,19 +14,17 @@ export default function Input({
     // hidden labels to satisfy Drone
     return (
       <>
-        <label hidden>
+        <label>
           Top text
           <input
-            hidden
             onChange={(e) => {
               setTopText(e.currentTarget.value);
             }}
           />
         </label>
-        <label hidden>
+        <label>
           Bottom text
           <input
-            hidden
             onChange={(e) => {
               setBotText(e.currentTarget.value);
             }}
